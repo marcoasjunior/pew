@@ -6,7 +6,9 @@
     "outDir": "dist",
     "lib": ["ESNext"]
   },
+
   "exclude": [
     "node_modules"
-  ]
+  ],
+  
 }
