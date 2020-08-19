@@ -5,7 +5,8 @@ export interface IUserSchema extends Document {
     email: string;
     password: string;
     gender: Gender;
-    follow?: Types.Array<string>;
+    follow?: Types.Array<Types.ObjectId>;
+    followers?: Types.Array<Types.ObjectId>;
 }
 
 enum Gender {
@@ -35,6 +36,10 @@ export const UserSchema = new Schema({
         required: true
     },
     follow: [{
+        type: Types.ObjectId,
+        ref: 'User'
+    }],
+    followers: [{
         type: Types.ObjectId,
         ref: 'User'
     }],
