@@ -1,4 +1,4 @@
 import { UserSchema, IUserSchema } from './Schema'
-import { model } from 'mongoose'
+import { mongoose } from '../mongoose'
 
-export default model<IUserSchema>("User", UserSchema)
+export default mongoose.model<IUserSchema>("User", UserSchema)

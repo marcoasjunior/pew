@@ -3,10 +3,12 @@ require('dotenv').config()
 
 const CONNECTION = process.env.MONGOURI
 
-export default mongoose.connect(CONNECTION, {
+mongoose.connect(CONNECTION, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
     useCreateIndex: true
 })
+
+export { mongoose }
 
