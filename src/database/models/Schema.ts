@@ -5,7 +5,7 @@ export interface IUserSchema extends Document {
     email: string;
     password: string;
     gender: Gender;
-    follow: Types.Array<string>;
+    follow?: Types.Array<string>;
 }
 
 enum Gender {
@@ -30,7 +30,7 @@ export const UserSchema = new Schema({
         required: true
     },
     gender: {
-        type: Number,
+        type: String,
         enum: Object.values(Gender),
         required: true
     },
