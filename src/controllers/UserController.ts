@@ -1,7 +1,4 @@
-import {
-    Request,
-    Response
-} from "express";
+import { Request, Response } from "express";
 import User from "../database/models/User";
 import { Interaction } from '../services/UserServices'
 import UserServices from "../services/UserServices";
